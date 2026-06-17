@@ -836,6 +836,10 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
       <div class="sb-tab" onclick="switchSbTab('buffet')">Snack Buffet (with Setup)</div>
     </div>
 
+    <!-- Floating T&C Button -->
+    <button onclick="openTnC()" style="position:fixed;bottom:28px;right:28px;z-index:800;display:none;align-items:center;gap:7px;background:#FCC529;color:#1C2E50;border:none;border-radius:50px;padding:11px 20px;font-size:12px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif;letter-spacing:.4px;box-shadow:0 6px 24px rgba(252,197,41,.45),0 2px 8px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s;white-space:nowrap" id="tncFloatBtn" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(252,197,41,.55),0 4px 12px rgba(0,0,0,.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(252,197,41,.45),0 2px 8px rgba(0,0,0,.12)'">📋 T&amp;C</button>
+
+
     <!-- ── BULK SNACKS ── -->
     <div class="sb-panel active" id="sb-bulk">
       <div class="tier-note" style="background:rgba(63,153,168,.07);border:1px solid rgba(63,153,168,.25);border-radius:10px;padding:10px 16px;margin-bottom:18px;font-size:12px;color:#1E5F6A;font-weight:600">
@@ -910,7 +914,7 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
           <div class="vc2-icon">🍱</div>
           <div class="vc2-info">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px">
-              <div class="vc2-name">Socials</div>
+              <div class="vc2-name">Premium Curated Boxes</div>
               <span style="background:#155493;color:#fff;border-radius:20px;padding:2px 10px;font-size:9px;font-weight:800;letter-spacing:.5px;white-space:nowrap;font-family:'Poppins',sans-serif">Premium Vendor</span>
             </div>
             <div class="vc2-tagline">Curated Snack Boxes · Veg &amp; Non-Veg</div>
@@ -922,11 +926,11 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
           <div class="vc2-icon">🥂</div>
           <div class="vc2-info">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px">
-              <div class="vc2-name">Melaange</div>
+              <div class="vc2-name">Premium Catering</div>
               <span style="background:#155493;color:#fff;border-radius:20px;padding:2px 10px;font-size:9px;font-weight:800;letter-spacing:.5px;white-space:nowrap;font-family:'Poppins',sans-serif">Premium Vendor</span>
             </div>
             <div class="vc2-tagline">Economy · Mid-Range · Premium Catering</div>
-            <div class="vc2-tags"><span class="vc2-tag">Economy ₹200+</span><span class="vc2-tag">Mid ₹345+</span><span class="vc2-tag">Premium ₹375+</span></div>
+            <div class="vc2-tags"><span class="vc2-tag">Economy</span><span class="vc2-tag">Mid-Range</span><span class="vc2-tag">Premium</span></div>
           </div>
           <div class="vc2-arrow">→</div>
         </div>
@@ -934,11 +938,11 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
           <div class="vc2-icon">🎉</div>
           <div class="vc2-info">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px">
-              <div class="vc2-name">Brunch n Bite</div>
+              <div class="vc2-name">Live Counter Buffet</div>
               <span style="background:#155493;color:#fff;border-radius:20px;padding:2px 10px;font-size:9px;font-weight:800;letter-spacing:.5px;white-space:nowrap;font-family:'Poppins',sans-serif">Premium Vendor</span>
             </div>
             <div class="vc2-tagline">Live Counter Buffet Experience</div>
-            <div class="vc2-tags"><span class="vc2-tag">Premium ₹300+</span><span class="vc2-tag">Standard ₹200+</span><span class="vc2-tag">Live Counters</span></div>
+            <div class="vc2-tags"><span class="vc2-tag">Premium</span><span class="vc2-tag">Standard</span><span class="vc2-tag">Live Counters</span></div>
           </div>
           <div class="vc2-arrow">→</div>
         </div>
@@ -960,7 +964,7 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
             <div class="vc2-tagline">Full-range Bakery · Savoury · Desserts</div>
             <div class="vc2-tags"><span class="vc2-tag">Croissants</span><span class="vc2-tag">Puffs</span><span class="vc2-tag">Dessert Jars</span></div>
           </div>
-          <button class="setup-cost-float" onclick="event.stopPropagation();openSetup('normal')">Setup Cost<br><strong>₹200/pax</strong></button>
+          <div class="vc2-arrow">→</div>
         </div>
 
         <div class="vc2-card" onclick="openLanding('snackme')" style="position:relative;overflow:visible">
@@ -970,7 +974,7 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
             <div class="vc2-tagline">Savoury &amp; Dessert Individual Items</div>
             <div class="vc2-tags"><span class="vc2-tag">Samosas</span><span class="vc2-tag">Rolls</span><span class="vc2-tag">Burgers</span></div>
           </div>
-          <button class="setup-cost-float" onclick="event.stopPropagation();openSetup('normal')">Setup Cost<br><strong>₹200/pax</strong></button>
+          <div class="vc2-arrow">→</div>
         </div>
 
         <div class="vc2-card" onclick="openLanding('billion')" style="position:relative;overflow:visible">
@@ -980,7 +984,7 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
             <div class="vc2-tagline">Artisan Bakery · Savoury &amp; Pastries</div>
             <div class="vc2-tags"><span class="vc2-tag">Sandwiches</span><span class="vc2-tag">Pastries</span><span class="vc2-tag">Donuts</span></div>
           </div>
-          <button class="setup-cost-float" onclick="event.stopPropagation();openSetup('normal')">Setup Cost<br><strong>₹200/pax</strong></button>
+          <div class="vc2-arrow">→</div>
         </div>
 
       </div>
@@ -998,9 +1002,9 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
             <button class="setup-btn" onclick="openSetup('normal')" style="margin-left:auto">📋 Details</button>
           </div>
           <div style="padding:12px 18px;display:flex;gap:8px;flex-wrap:wrap">
-            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">0–100 pax · ₹200/pax</span>
-            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">100–300 pax · ₹100/pax</span>
-            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">300–500 pax · ₹75/pax</span>
+            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">0–100 pax</span>
+            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">100–300 pax</span>
+            <span style="background:#FFF2EE;border:1px solid rgba(237,105,64,.25);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#7A2A10">300–500 pax</span>
           </div>
         </div>
 
@@ -1014,9 +1018,9 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
             <button class="setup-btn" onclick="openSetup('premium')" style="margin-left:auto">📋 Details</button>
           </div>
           <div style="padding:12px 18px;display:flex;gap:8px;flex-wrap:wrap">
-            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">0–100 pax · ₹350/pax</span>
-            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">100–300 pax · ₹175/pax</span>
-            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">300–500 pax · ₹150/pax</span>
+            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">0–100 pax</span>
+            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">100–300 pax</span>
+            <span style="background:#EBF0F9;border:1px solid rgba(21,84,147,.2);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;color:#0D2D52">300–500 pax</span>
           </div>
         </div>
 
@@ -1024,6 +1028,108 @@ h1, h2, .det-title, .lp-hero-name, .vc2-name, .chip-name,
 
     </div>
 
+  </div>
+</div>
+
+
+<!-- ══════ T&C MODAL ══════ -->
+<div id="tncModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;overflow-y:auto;padding:20px">
+  <div style="max-width:680px;margin:40px auto;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.35)">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#1C2E50,#155493);padding:22px 28px;display:flex;align-items:center;justify-content:space-between;position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#FCC529,#ED6940,#D63870,#7B5EA7)"></div>
+      <div>
+        <div style="font-size:9px;font-weight:800;letter-spacing:2.5px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:4px">SmartQ Snack Services</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#FCC529;font-weight:400">Terms &amp; Conditions</div>
+      </div>
+      <button onclick="closeTnC()" style="background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);color:#fff;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;flex-shrink:0;transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,.25)'" onmouseout="this.style.background='rgba(255,255,255,.15)'">✕</button>
+    </div>
+    <!-- Body -->
+    <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:14px">
+
+      <!-- STANDARD SNACK TERMS -->
+      <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#98A4B8;margin-bottom:2px">Standard Snack Box &amp; Bulk Snack Terms</div>
+
+      <div style="background:#F7F8FA;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:11px">
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#FCC529;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">🚚</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Free Delivery Eligibility</div><div style="font-size:12px;color:#5A677E;line-height:1.5">Complimentary snack delivery is applicable on orders with a minimum bill value of <strong>₹10,000 and above</strong>. Orders below this threshold are subject to applicable transport charges.</div></div>
+        </div>
+
+        <div style="height:1px;background:#E4E8EE"></div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#EBF0F9;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">📦</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Box Charges</div><div style="font-size:12px;color:#5A677E;line-height:1.5"><strong>Regular boxes:</strong> Small +₹10 · Medium +₹15 · Large +₹20 (per box, excluding GST). <strong>Premium customised boxes:</strong> Starting at ₹50 and above, depending on specifications and materials. Prices are subject to change.</div></div>
+        </div>
+
+        <div style="height:1px;background:#E4E8EE"></div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#EBF6F8;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">👥</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Distribution Manpower</div><div style="font-size:12px;color:#5A677E;line-height:1.5">On-site distribution assistance is available at <strong>₹1,000</strong> per deployment. This covers manpower for systematic box distribution at the venue.</div></div>
+        </div>
+
+        <div style="height:1px;background:#E4E8EE"></div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#F3EFFA;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">⏱</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Order Confirmation &amp; Lead Times</div><div style="font-size:12px;color:#5A677E;line-height:1.5">
+            <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px">
+              <div style="display:flex;gap:8px;align-items:center"><span style="background:#EBF0F9;border-radius:20px;padding:2px 10px;font-size:10px;font-weight:800;color:#155493;white-space:nowrap">0–500 units</span><span>Order must be confirmed at least <strong>48 hours</strong> in advance.</span></div>
+              <div style="display:flex;gap:8px;align-items:center"><span style="background:#EBF0F9;border-radius:20px;padding:2px 10px;font-size:10px;font-weight:800;color:#155493;white-space:nowrap">500+ units</span><span>A minimum of <strong>72 working hours</strong> notice is required.</span></div>
+              <div style="display:flex;gap:8px;align-items:center"><span style="background:#F3EFFA;border-radius:20px;padding:2px 10px;font-size:10px;font-weight:800;color:#3D1A72;white-space:nowrap">Custom Order</span><span>Requires <strong>1 week to 10 days</strong> depending on complexity and quantity.</span></div>
+            </div>
+          </div></div>
+        </div>
+
+        <div style="height:1px;background:#E4E8EE"></div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#FEF0F5;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">🚫</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Anti-Snack Policy (Restricted Items)</div><div style="font-size:12px;color:#5A677E;line-height:1.5">The following items are not permitted or cannot be processed as part of SmartQ snack orders:</div>
+            <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #F0F2F6"><span style="font-size:12px;color:#1C2333">Alcoholic beverages</span><span style="font-size:10px;font-weight:800;color:#D63870;background:#FEF0F5;border-radius:20px;padding:2px 8px">Not Permitted</span></div>
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #F0F2F6"><span style="font-size:12px;color:#1C2333">Non-branded / unverified food products</span><span style="font-size:10px;font-weight:800;color:#D63870;background:#FEF0F5;border-radius:20px;padding:2px 8px">Not Permitted</span></div>
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #F0F2F6"><span style="font-size:12px;color:#1C2333">Items without FSSAI-compliant packaging</span><span style="font-size:10px;font-weight:800;color:#D63870;background:#FEF0F5;border-radius:20px;padding:2px 8px">Not Permitted</span></div>
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #F0F2F6"><span style="font-size:12px;color:#1C2333">Perishables without cold-chain assurance</span><span style="font-size:10px;font-weight:800;color:#ED6940;background:#FFF2EE;border-radius:20px;padding:2px 8px">Conditional</span></div>
+              <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:7px 10px;border:1px solid #F0F2F6"><span style="font-size:12px;color:#1C2333">External / client-supplied food items</span><span style="font-size:10px;font-weight:800;color:#ED6940;background:#FFF2EE;border-radius:20px;padding:2px 8px">On Request</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PREMIUM MENU TERMS -->
+      <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#98A4B8;margin-top:6px;margin-bottom:2px">Premium Menu — Additional Charges</div>
+
+      <div style="background:#EBF0F9;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:11px;border:1px solid rgba(21,84,147,.15)">
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#155493;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">🚐</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Premium Transport Surcharge</div><div style="font-size:12px;color:#5A677E;line-height:1.5">For premium menu orders below <strong>50 units</strong>, an additional transport fee of <strong>₹1,500</strong> is applicable to cover delivery logistics.</div></div>
+        </div>
+
+        <div style="height:1px;background:rgba(21,84,147,.15)"></div>
+
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:28px;height:28px;border-radius:8px;background:#155493;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">🧑‍🍳</div>
+          <div><div style="font-size:12px;font-weight:700;color:#1C2333;margin-bottom:2px">Premium Box Distribution — Labour Cost</div><div style="font-size:12px;color:#5A677E;line-height:1.5">Dedicated labour for premium box distribution is billed separately and will be quoted based on order size, venue layout, and service requirements. Please request a quote at the time of booking.</div></div>
+        </div>
+
+      </div>
+
+      <!-- Pricing Note -->
+      <div style="background:#FFFAE6;border:1px solid #FFE680;border-radius:10px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start">
+        <span style="font-size:16px;flex-shrink:0">ℹ️</span>
+        <div style="font-size:11.5px;color:#7A5200;line-height:1.55;font-weight:500">Product-level pricing is shared selectively based on client requirements and order specifics. Please connect with your SmartQ account manager for a tailored quote.</div>
+      </div>
+
+      <div style="text-align:right;margin-top:4px">
+        <button onclick="closeTnC()" style="background:#155493;color:#fff;border:none;border-radius:24px;padding:10px 28px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:background .15s" onmouseover="this.style.background='#1C6BBF'" onmouseout="this.style.background='#155493'">Got it</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -3020,6 +3126,8 @@ function showSection(name){
   if(activeTab)activeTab.classList.add('active');
   const idx={festive:0,snack:1,lunch:2,brands:3}[name];
   document.querySelectorAll('.sq-nav-item')[idx].classList.add('active');
+  var tncBtn=document.getElementById('tncFloatBtn');
+  if(tncBtn) tncBtn.style.display = name==='snack' ? 'inline-flex' : 'none';
   window.scrollTo(0,0);
 }
 /* switchSbTab defined below */
@@ -3143,6 +3251,18 @@ function switchSbTab(name){
   var panel=document.getElementById('sb-'+name);
   if(panel)panel.classList.add('active');
 }
+
+function openTnC(){
+  document.getElementById('tncModal').style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeTnC(){
+  document.getElementById('tncModal').style.display='none';
+  document.body.style.overflow='';
+}
+document.getElementById('tncModal').addEventListener('click',function(e){
+  if(e.target===this) closeTnC();
+});
 
 function cwSubTab(pill, panelId) {
   var bar = pill.closest('.cw-sub-bar');
